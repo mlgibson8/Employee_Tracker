@@ -1,8 +1,12 @@
-const inquirer = require('inquirer');
 const fs = require('fs');
 const connection = require('./db/connections.js');
-const cTable = require('console.table');
+const express = require('express');
+const inquirer = require('inquirer');
+const path = require('path');
+const app = express();
+const PORT =  3006;
 
+app.use(express.static('public'));
 const startMenu =() => {
     inquirer.prompt({
         name: 'start',
@@ -32,6 +36,9 @@ const startMenu =() => {
             case "view all employees":
                 viewEmployees();
                 break;
+            case "view all employees by department":
+                viewEmployeesByDepartment();
+                break
             case "add a department":
                 addDepartment();
                 break;
@@ -50,8 +57,6 @@ const startMenu =() => {
         }
     });
 };
-
-
 const viewDepartments = () => {
     connection.query('SELECT * FROM department', (err, res) => {
         if (err) throw err;
@@ -59,3 +64,9 @@ const viewDepartments = () => {
         startMenu();
     });
 }
+
+
+app.listen(PORT, () =>
+  console.log(`Example app listening at http://localhost:${PORT}`)
+);
+startMenu();
