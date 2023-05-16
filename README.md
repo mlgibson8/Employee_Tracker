@@ -30,6 +30,6 @@
 ## License
     
 ## Deployed Application URL
-![link]  https://github.com/mlgibson8/Employee_Tracker
-![media] https://drive.google.com/file/d/1uNeUn7MsFx1DxTDzTgJ1VFf-1UsjwPgM/view?usp=sharing
+[link]  https://github.com/mlgibson8/Employee_Tracker
+[link] https://drive.google.com/file/d/1uNeUn7MsFx1DxTDzTgJ1VFf-1UsjwPgM/view?usp=sharing
 
