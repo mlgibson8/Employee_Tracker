@@ -88,9 +88,7 @@ const viewAllRoles = () => {
 }
 // function to view all employees set up with the views that we  seeded for formatting
 const viewAllEmployees = () => {
-    db.query(`
-    SELECT * from Employee
-    `, function (err, results) {
+    db.query(`SELECT * from Employee`, function (err, results) {
         console.log(`\n`);
         console.table(results);
         promptUser();
@@ -269,7 +267,6 @@ const updateEmployeeRole = () => {
             {
                 type: 'list',
                 message: "What is the employee's new role?",
-                name: 'role',
                 choices: roleArray
             },
         ]).then((data) => {
