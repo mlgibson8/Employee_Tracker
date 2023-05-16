@@ -1,20 +1,23 @@
--- prepopulate seeds
-INSERT INTO department (name)
-VALUES ('Sales'),
-       ('Engineering'),
-       ('Production')
-       ('Finance'),
-       ('Human Resources');
+INSERT INTO department(name)
+VALUES ("Operations"), ("Marketing"), ("Sales"), ("Legal"), ("Tech");
 
-INSERT INTO role (title, salary, department_id)
-VALUES ('Sales Lead', 100000, 1),
-       ('Salesperson', 80000, 1),
-       ('Customer service', 60000, 1),
-       ('Lead Engineer', 150000, 2),
-       ('Software Engineer', 120000, 2),
-       ('Accountant', 125000, 4),
-       ('Legal Team Lead', 250000, 5),
-       ('Lawyer', 190000, 5);
+-- Adding role seeds
+INSERT INTO role(title, salary, department_id)
+VALUES ("Operations Manager",120000, 1),
+    ("Associate",75000, 1),
+    ("Marketing Manager",125000, 2),
+    ("Salesman",90000, 3),
+    ("Lawyer",180000, 4),
+    ("Developer",135000, 5),
+    ("Intern",85000, 5),
+    ("DevOps",120000, 5);
 
-INSERT INTO employee (first_name, last_name, title, role_id, department_id, salary, manager_id)
-VALUES ('jimmothy','gilbert',2,1),
+-- Adding employee seeds
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Jimbo", "Colliage", 1, null),
+    ("Annette", "Ficco", 3, null),
+    ("Mark", "Newton", 5, 2),
+    ("Sierra", "Buffington", 2, 3),
+    ("Amber", "Malone", 3, 3),
+    ("Dan", "Humphry", 4, 3);
+

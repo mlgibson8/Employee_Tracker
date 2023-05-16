@@ -2,9 +2,9 @@
 const mysql2 = require('mysql2');
 
 //connect to database
-const db = mysql2.createConnection(
+const connection = mysql2.createConnection(
     {
-        host: 'localhost',
+        host: '127.0.0.1',
         user: 'root',
         password: 'pword',
         database: 'employee_db'
@@ -12,4 +12,4 @@ const db = mysql2.createConnection(
     },
     console.log('Connected to the employee database.')
 ); 
-module.exports = db;
+module.exports = connection;
