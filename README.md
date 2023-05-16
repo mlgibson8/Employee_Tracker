@@ -1,9 +1,9 @@
 # Employee Tracker
-  [!Github License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+  ![Github License:MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ## Description
   This CLI prompt shows the user an employee database and allows them to view the data and add to it
 ## Screenshots
-    ![Screenshot](https://github.com/mlgibson8/Employee_Tracker/blob/main/employeeTracker.png)
+![Screenshot](https://github.com/mlgibson8/Employee_Tracker/blob/main/employeeTracker.png)
 ## Table of Contents
 * [Installation](#installation)
 * [Features](#features)
@@ -30,5 +30,5 @@
 ## License
     
 ## Deployed Application URL
-    https://github.com/mlgibson8/Employee_Tracker
+   https://github.com/mlgibson8/Employee_Tracker
 
